@@ -1,35 +1,35 @@
-[French translation](https://github.com/Pacito2)
+[French translation](https://github.com/Pacito2/FlanToDynamX/blob/master/README_FR.md)
 
 # FlanToDynamX
 
 This pack contains two programs allowing to pass toolbox .java models intended for Flan's mod on the Dynamx mod.
 
-## Getting Started
+## Informations
 
-Do not hesitate to report any errors.
+Do not hesitate to report any errors.  
 It is not complicated to use these programs. Take care to read each step carefully.
 
 ## Prerequisites
 
-Java			(https://www.java.com/fr/download/)
-Toolbox			(https://www.minecraft-smp.de/index.php/toolbox-2-0)
+Java			(https://www.java.com/fr/download/)  
+Toolbox			(https://www.minecraft-smp.de/index.php/toolbox-2-0)  
 Blender >2.8	(https://www.blender.org/)
 
 ## Instructions
 
 ### Editing .java models
 
-Add your .java models to the "./import" folder.
-Open the program "JavaVehicleExtractor.jar".
+Add your .java models to the "./import" folder.  
+Open the program "JavaVehicleExtractor.jar".  
 Wait for it to alert you when its execution is finished.
 
 ### Switching from .java to .obj models
 
-Open Toolbox.
-For each models in 
-	./export/body, 
-	./export/steering,
-	./export/wheel. 
+Open Toolbox.  
+For each models in  
+	./export/body,  
+	./export/steering,  
+	./export/wheel.  
 	Do this:
 	
 	-	Import > Model From Java > *Select the model*.
@@ -39,11 +39,11 @@ For each models in
 
 ### Adding vehicles to DynamX
 
-Open "DynamXVehicle.blend" with Blender.
-Go to the "Scripting" tab (towards the center at the top).
-Click on "Run Script" (arrow icon).
-Go to the first tab "Layout" (on top).
-Press "N".
+Open "DynamXVehicle.blend" with Blender.  
+Go to the "Scripting" tab (towards the center at the top).  
+Click on "Run Script" (arrow icon).  
+Go to the first tab "Layout" (on top).  
+Press "N".  
 Go to the "Dynamx Editor" tab (on the side, to the right of the appeared window):
 	
 	a. To generate an empty DynamX pack (If you don't already have one):
