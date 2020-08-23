@@ -2,6 +2,8 @@
 
 # FlanToDynamX
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](ian.ledigfr@gmail.com)
+
 Ce pack contient deux programmes permettant de passer un modèle .java conçu pour Flan's mod sur DynamX.
 
 ## Informations
