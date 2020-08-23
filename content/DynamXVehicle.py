@@ -31,19 +31,19 @@ class panel(bpy.types.Panel):
 class paths(bpy.types.PropertyGroup):
     import_obj: bpy.props.StringProperty(name="Import .obj path",
                                         description="Folder containing the 'body', 'steering' and 'wheel' folders",
-                                        default="E:\\Jeux\\Installation\\Minecraft\\DrawLife\\FlanToDynamX\\export\\",
+                                        default="...\\export\\",
                                         maxlen=1024,
                                         subtype="FILE_PATH")
                                         
     export_obj: bpy.props.StringProperty(name="Export .obj path",
                                         description=".obj export folder",
-                                        default="C:\\Users\\Pacito2\\AppData\\Roaming\\.minecraft\\DynamX\\DrawLife\\assets\\dynamxmod\\models\\obj\\",
+                                        default="...\\.minecraft\\DynamX\\DrawLife\\assets\\dynamxmod\\models\\obj\\",
                                         maxlen=1024,
                                         subtype="FILE_PATH")
                                         
     export_config: bpy.props.StringProperty(name="Export .dynx path",
                                         description=".dynx export folder",
-                                        default="C:\\Users\\Pacito2\\AppData\\Roaming\\.minecraft\\DynamX\\DrawLife\\vehicles\\",
+                                        default="...\\.minecraft\\DynamX\\DrawLife\\vehicles\\",
                                         maxlen=1024,
                                         subtype="FILE_PATH")
                                         
@@ -53,7 +53,7 @@ class paths(bpy.types.PropertyGroup):
                                         
     pack_path: bpy.props.StringProperty(name="Pack path",
                                         description="The directory to create the pack",
-                                        default="C:\\Users\\Pacito2\\AppData\\Roaming\\.minecraft\\DynamX\\",
+                                        default="...\\.minecraft\\DynamX\\",
                                         maxlen=1024,
                                         subtype="FILE_PATH")
           

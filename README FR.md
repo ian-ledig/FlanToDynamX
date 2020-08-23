@@ -35,7 +35,8 @@ Pour tous les modèles dans
 	-	Import > Model From Java > *Sélectionnez un modèle*.
 	-	Import > Texture from File > *Sélectionnez la texture du modèle*.
 	(Pour la roue, par exemple, vérifiez que le modèle ne contient que la roue de gauche. Si non, supprimez les parties en trop).
-	-	Export > As .Obj Model (All Parts in 1 Mesh) (la dernière option) > *Sélectionnez le même répertoire que le .java (./export/...)*.
+	-	Export > As .Obj Model (All Parts in 1 Mesh) (la dernière option) > *Sélectionnez le même répertoire que le .java (./export/...)*. 
+	(Vous pouvez sauvegarder le fichier .blend (File > Save) pour enregistrer les chemins.
 
 ### Ajout des véhicules sur DynamX
 
@@ -66,4 +67,4 @@ Allez sur le tap "DynamX Editor" (à l'envers, sur le côté de la nouvelle fen�
 
 * **Pacito2** - *Travail initial* - [Pacito2](https://github.com/Pacito2)
 * **Bravesonny** - *Modèle du Steve assis*
-
+* **Équipe de DrawLife** - *Testeurs*

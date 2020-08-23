@@ -1,4 +1,4 @@
-[French translation](https://github.com/Pacito2/FlanToDynamX/blob/master/README_FR.md)
+[French translation](https://github.com/Pacito2/FlanToDynamX/blob/master/README%20FR.md)
 
 # FlanToDynamX
 
@@ -35,7 +35,8 @@ For each models in
 	-	Import > Model From Java > *Select the model*.
 	-	Import > Texture from File > *Select the model texture*.
 	(For wheel, for example, check that the model contains only the left wheel. If not, remove the disturbing objects).
-	-	Export > As .Obj Model (All Parts in 1 Mesh) (the last option) > *Select the same directory as the .java (./export/...)*.
+	-	Export > As .Obj Model (All Parts in 1 Mesh) (the last option) > *Select the same directory as the .java (./export/...)*.  
+	(You can save the .blend file (File> Save) to save the paths)
 
 ### Adding vehicles to DynamX
 
@@ -66,4 +67,4 @@ Go to the "Dynamx Editor" tab (on the side, to the right of the appeared window)
 
 * **Pacito2** - *Initial work* - [Pacito2](https://github.com/Pacito2)
 * **Bravesonny** - *Modeling seated Steve model*
-
+* **DrawLife team** - *Testers*
