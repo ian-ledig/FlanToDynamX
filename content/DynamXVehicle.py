@@ -235,7 +235,7 @@ class next_model(bpy.types.Operator):
             except:
                 self.report({'INFO'}, "directory '" + path + "' already exist")
                 print("directory '" + path + "' already exist")
-                
+            
             #Write the vehicle config file
             vehicle_file = path + "vehicle_" + vehicle_name + ".dynx"
             with open(vehicle_file, 'w') as file:
@@ -323,8 +323,8 @@ PassengerBackRightSeat{
             wheel_file = path + "wheel_" + vehicle_name + ".dynx"
             with open(wheel_file, 'w') as file:
                 file.write("""Model: obj/""" + vehicle_name + """/""" + vehicle_name + """_wheel.obj
-Width: 0.226
-WheelRadius: 0.551
+Width: """ + str(next_model.vehicle_wheel_width) + """
+WheelRadius: """ + str(next_model.vehicle_wheel_radius) + """
 RimRadius: 0.300
 Friction: 1.5
 BrakeForce: 500
@@ -475,16 +475,17 @@ Gear_5{
                 #Importing model
                 model_path = os.path.join(dir, obj)
                 bpy.ops.import_scene.obj(filepath = model_path)
+                obj_wheel = objects[0]
                 
                 #Set geometry to origin
-                bpy.context.view_layer.objects.active = objects[0]
+                bpy.context.view_layer.objects.active = obj_wheel
                 bpy.ops.object.origin_set(type='GEOMETRY_ORIGIN', center='MEDIAN')
                 
                 #Set Z rotation
-                objects[0].rotation_euler[2] = math.radians(-90)
+                obj_wheel.rotation_euler[2] = math.radians(-90)
                 
                 vehicle_name = next_model.vehicle_name
-                
+  
                 #Try to create the vehicle directory
                 path = paths.export_obj + "\\" + vehicle_name + "\\"
                 try:
