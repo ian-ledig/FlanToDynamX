@@ -240,8 +240,9 @@ class next_model(bpy.types.Operator):
             vehicle_file = path + "vehicle_" + vehicle_name + ".dynx"
             with open(vehicle_file, 'w') as file:
                 file.write("""Description: """ + vehicle_name + """
-EmptyMass: 750
-DragCoefficient: 0.2
+                
+EmptyMass: 1191
+DragCoefficient: 0.4
 CenterOfGravityOffset: 0 0 0
 
 Model: obj/""" + vehicle_name + """/""" + vehicle_name + """_body.obj
@@ -323,17 +324,17 @@ PassengerBackRightSeat{
             wheel_file = path + "wheel_" + vehicle_name + ".dynx"
             with open(wheel_file, 'w') as file:
                 file.write("""Model: obj/""" + vehicle_name + """/""" + vehicle_name + """_wheel.obj
-Width: """ + str(next_model.vehicle_wheel_width) + """
-WheelRadius: """ + str(next_model.vehicle_wheel_radius) + """
-RimRadius: 0.300
-Friction: 1.5
-BrakeForce: 500
-RollInInfluence: 0.5
-SuspensionRestLength: 0.1
-SuspensionStiffness: 13
+Width: 0.226
+WheelRadius: 0.551
+RimRadius: 0.323
+Friction: 1
+BrakeForce: 70
+RollInInfluence: 1
+SuspensionRestLength: 0.05
+SuspensionStiffness: 30
 SuspensionMaxForce: 10000
-WheelDampingRelaxation: 0.5
-WheelsDampingCompression: 0.2
+WheelDampingRelaxation: 0.45
+WheelsDampingCompression: 0.22
 """)
             file.close()
                 
@@ -382,64 +383,69 @@ WheelsDampingCompression: 0.2
             #Write the engine config file
             engine_file = path + "engine_" + vehicle_name + ".dynx"
             with open(engine_file, 'w') as file:
-                file.write("""Power: 6000
-MaxRPM: 8800
-Braking: 100
+                file.write("""Power: 1683
+MaxRPM: 5000
+Braking: 15
 
 Point_1{
     RPMPower: 0 0
 }
 Point_2{
-    RPMPower: 1000 0.4
+    RPMPower: 900 0.55
 }
 Point_3{
-    RPMPower: 2000 0.45
+    RPMPower: 1400 0.50
 }
 Point_4{
-    RPMPower: 3000 0.5
+    RPMPower: 1900 0.60
 }
 Point_5{
-    RPMPower: 4000 0.6
+    RPMPower: 2400 0.70
 }
 Point_6{
-    RPMPower: 5000 0.65
+    RPMPower: 2900 0.80
 }
 Point_7{
-    RPMPower: 6000 0.8
+    RPMPower: 3400 0.70
 }
 Point_8{
-     RPMPower: 7000 0.99
+    RPMPower: 4000 0.45
 }
 Point_9{
-     RPMPower: 8000 0.4
-}
-Point_10{
-     RPMPower: 9000 0.1
+    RPMPower: 5000 0.3
 }
 
 Gear_0{
-    SpeedRange: 0 -40
-    RPMRange: 2000 7500
+    SpeedRange: 0 -30
+    RPMRange: 800 5000
 }
 Gear_1{
     SpeedRange: -1000000 1000000
-    RPMRange: 1000 8800
+    RPMRange: 0 5000
 }
 Gear_2{
-    SpeedRange: 0 60
-    RPMRange: 1200 8800
+    SpeedRange: 0 10
+    RPMRange: 800 2400
 }
 Gear_3{
-    SpeedRange: 55 100
-    RPMRange: 1200 8600
+    SpeedRange: 10 30
+    RPMRange: 800 2400
+}
+Gear_3{
+    SpeedRange: 30 50
+    RPMRange: 850 2400
 }
 Gear_4{
-    SpeedRange: 95 150
-    RPMRange: 1200 8000
+    SpeedRange: 50 70
+    RPMRange: 900 2400
 }
 Gear_5{
-    SpeedRange: 145 190
-    RPMRange: 1200 7800
+    SpeedRange: 70 85
+    RPMRange: 900 2400
+}
+Gear_6{
+    SpeedRange: 85 175
+    RPMRange: 900 5000
 }
 """)
             file.close()
