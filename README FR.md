@@ -9,7 +9,7 @@ Ce pack contient deux programmes permettant de passer un modèle .java conçu po
 N'hésitez pas à reporter vos erreurs.  
 Il n'est pas compliqué d'utiliser ces programmes. Prenez le temps de bien lire chaque instruction.
 
-## Prerequisites
+## Prérequis
 
 Java			(https://www.java.com/fr/download/)  
 Toolbox			(https://www.minecraft-smp.de/index.php/toolbox-2-0)  
