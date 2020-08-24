@@ -1,8 +1,6 @@
-[Traduction anglaise](https://github.com/Pacito2/FlanToDynamX/blob/master/README.md)
+[English translation](https://github.com/Pacito2/FlanToDynamX/blob/master/README.md)
 
 # FlanToDynamX
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](ian.ledigfr@gmail.com)
 
 Ce pack contient deux programmes permettant de passer un modèle .java conçu pour Flan's mod sur DynamX.
 
@@ -67,6 +65,7 @@ Allez sur le tap "DynamX Editor" (à l'envers, sur le côté de la nouvelle fen�
 
 ## Auteurs
 
-* **Pacito2** - *Travail initial* - [Pacito2](https://github.com/Pacito2)
+* **[Pacito2](https://github.com/Pacito2)** - *Travail initial*
+* **[BliTz](https://github.com/BliTz037)** - *Aide à la configuration des .dynx*
 * **Bravesonny** - *Modèle du Steve assis*
 * **Équipe de DrawLife** - *Testeurs*

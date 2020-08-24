@@ -1,8 +1,6 @@
-[French translation](https://github.com/Pacito2/FlanToDynamX/blob/master/README%20FR.md)
+[Traduction française](https://github.com/Pacito2/FlanToDynamX/blob/master/README%20FR.md)
 
 # FlanToDynamX
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](ian.ledigfr@gmail.com)
 
 This pack contains two programs allowing to pass toolbox .java models intended for Flan's mod on the Dynamx mod.
 
@@ -67,6 +65,7 @@ Go to the "Dynamx Editor" tab (on the side, to the right of the appeared window)
 
 ## Authors
 
-* **Pacito2** - *Initial work* - [Pacito2](https://github.com/Pacito2)
+* **[Pacito2](https://github.com/Pacito2)** - *Initial work*
+* **[BliTz](https://github.com/BliTz037)** - *Help configuring .dynx*
 * **Bravesonny** - *Modeling seated Steve model*
 * **DrawLife team** - *Testers*
