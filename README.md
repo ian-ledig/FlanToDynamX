@@ -1,6 +1,6 @@
 [Traduction française](https://github.com/Pacito2/FlanToDynamX/blob/master/README%20FR.md)
 
-# FlanToDynamX
+# FlanToDynamX v1.1
 
 This pack contains two programs allowing to pass toolbox .java models intended for Flan's mod on the Dynamx mod.
 
