@@ -245,6 +245,16 @@ EmptyMass: 1191
 DragCoefficient: 0.4
 CenterOfGravityOffset: 0 0 0
 
+DrawLifeAddon{
+    Trunk: 20
+    FuelInTank: 50
+    Strength: 100
+    Trunk_Position: -0.020345 2.64449 1.14081
+    Trunk_Scale: 0.777124 0.365566 0.5
+    Motor_Position: 0.005389 -1.33169 1.14081
+    Motor_Scale: 0.777124 0.706801 0.223486
+}
+
 Model: obj/""" + vehicle_name + """/""" + vehicle_name + """_body.obj
 ShapeYOffset: 0.2
 
