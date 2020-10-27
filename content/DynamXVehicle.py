@@ -254,16 +254,16 @@ DefaultSounds: """ + paths.pack_name + """.sounds_""" + vehicle_name + """
 SteeringWheel{
     PartName: SteeringWheel
     BaseRotation: 1 """ + str(next_model.vehicle_steering[3]) + """ """ + str(next_model.vehicle_steering[4]) + """ """ + str(next_model.vehicle_steering[5]) + """
-    RotationPoint: """ + str(next_model.vehicle_steering[0]) + """ """ + str(next_model.vehicle_steering[1]) + """ """ + str(next_model.vehicle_steering[2]) + """
+    Position: """ + str(next_model.vehicle_steering[0]) + """ """ + str(next_model.vehicle_steering[1]) + """ """ + str(next_model.vehicle_steering[2]) + """
 }
 
 Shape_Core{
-    ShapeScale: """ + str(next_model.vehicle_coll0[3]) + """ """ + str(next_model.vehicle_coll0[4]) + """ """ + str(next_model.vehicle_coll0[5]) + """
-    ShapePosition: """ + str(next_model.vehicle_coll0[0]) + """ """ + str(next_model.vehicle_coll0[1]) + """ """ + str(next_model.vehicle_coll0[2]) + """
+    Scale: """ + str(next_model.vehicle_coll0[3]) + """ """ + str(next_model.vehicle_coll0[4]) + """ """ + str(next_model.vehicle_coll0[5]) + """
+    Position: """ + str(next_model.vehicle_coll0[0]) + """ """ + str(next_model.vehicle_coll0[1]) + """ """ + str(next_model.vehicle_coll0[2]) + """
 }
 Shape_Top{
-    ShapeScale: """ + str(next_model.vehicle_coll1[3]) + """ """ + str(next_model.vehicle_coll1[4]) + """ """ + str(next_model.vehicle_coll1[5]) + """
-    ShapePosition: """ + str(next_model.vehicle_coll1[0]) + """ """ + str(next_model.vehicle_coll1[1]) + """ """ + str(next_model.vehicle_coll1[2]) + """
+    Scale: """ + str(next_model.vehicle_coll1[3]) + """ """ + str(next_model.vehicle_coll1[4]) + """ """ + str(next_model.vehicle_coll1[5]) + """
+    Position: """ + str(next_model.vehicle_coll1[0]) + """ """ + str(next_model.vehicle_coll1[1]) + """ """ + str(next_model.vehicle_coll1[2]) + """
 }
 
 WheelFrontLeft{
@@ -325,7 +325,7 @@ PassengerBackRightSeat{
             with open(wheel_file, 'w') as file:
                 file.write("""Model: obj/""" + vehicle_name + """/""" + vehicle_name + """_wheel.obj
 Width: 0.226
-WheelRadius: 0.551
+Radius: 0.551
 RimRadius: 0.323
 Friction: 1
 BrakeForce: 70
