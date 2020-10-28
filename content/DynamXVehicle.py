@@ -123,6 +123,8 @@ class next_model(bpy.types.Operator):
     vehicle_seat3 = list()
     vehicle_coll0 = list()
     vehicle_coll1 = list()
+    vehicle_trunk = list()
+    vehicle_motor = list()
     model_index = 0
     
     #Clear objects
@@ -210,6 +212,10 @@ class next_model(bpy.types.Operator):
                     next_model.vehicle_coll0 = [obj.location.x, obj.location.y, obj.location.z, obj.scale.x, obj.scale.y, obj.scale.z]
                 if("coll1" in obj.name):
                     next_model.vehicle_coll1 = [obj.location.x, obj.location.y, obj.location.z, obj.scale.x, obj.scale.y, obj.scale.z]
+                if("trunk" in obj.name):
+                    next_model.vehicle_trunk = [obj.location.x, obj.location.y, obj.location.z, obj.scale.x, obj.scale.y, obj.scale.z]
+                if("motor" in obj.name):
+                    next_model.vehicle_motor = [obj.location.x, obj.location.y, obj.location.z, obj.scale.x, obj.scale.y, obj.scale.z]
                     
                 #Selects and removes unnecessary objects
                 obj.select_set(False)
@@ -245,25 +251,25 @@ EmptyMass: 1191
 DragCoefficient: 0.4
 CenterOfGravityOffset: 0 0 0
 
+Model: obj/""" + vehicle_name + """/""" + vehicle_name + """_body.obj
+ShapeYOffset: 0.2
+
 DrawLifeAddon{
     Trunk: 20
     FuelInTank: 50
     Strength: 100
-    Trunk_Position: -0.020345 2.64449 1.14081
-    Trunk_Scale: 0.777124 0.365566 0.5
-    Motor_Position: 0.005389 -1.33169 1.14081
-    Motor_Scale: 0.777124 0.706801 0.223486
+    Trunk_Position: """ + str(next_model.vehicle_trunk[0]) + """ """ + str(next_model.vehicle_trunk[1]) + """ """ + str(next_model.vehicle_trunk[2]) + """ 
+    Trunk_Scale: """ + str(next_model.vehicle_trunk[3]) + """ """ + str(next_model.vehicle_trunk[4]) + """ """ + str(next_model.vehicle_trunk[5]) + """ 
+    Motor_Position: """ + str(next_model.vehicle_motor[0]) + """ """ + str(next_model.vehicle_motor[1]) + """ """ + str(next_model.vehicle_motor[2]) + """ 
+    Motor_Scale: """ + str(next_model.vehicle_motor[3]) + """ """ + str(next_model.vehicle_motor[4]) + """ """ + str(next_model.vehicle_motor[5]) + """ 
 }
-
-Model: obj/""" + vehicle_name + """/""" + vehicle_name + """_body.obj
-ShapeYOffset: 0.2
 
 DefaultEngine: """ + paths.pack_name + """.engine_""" + vehicle_name + """
 DefaultSounds: """ + paths.pack_name + """.sounds_""" + vehicle_name + """
 
 SteeringWheel{
     PartName: SteeringWheel
-    BaseRotation: 1 """ + str(next_model.vehicle_steering[3]) + """ """ + str(next_model.vehicle_steering[4]) + """ """ + str(next_model.vehicle_steering[5]) + """
+    BaseRotation: 31.7 1 0 0
     Position: """ + str(next_model.vehicle_steering[0]) + """ """ + str(next_model.vehicle_steering[1]) + """ """ + str(next_model.vehicle_steering[2]) + """
 }
 
@@ -605,6 +611,36 @@ Gear_6{
                 obj.location=(0,0.7,1.27)
                 bpy.ops.transform.resize(value=(1.4,2.1,0.38))
                 
+        #Adding trunk box object
+        mat_tru = bpy.data.materials.new(name="collision")
+        mat_tru.use_nodes = True
+        mat_tru.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.858, 0.702, 0.906, 1)
+        mat_tru.node_tree.nodes["Principled BSDF"].inputs[18].default_value = 0.0666667
+        mat_tru.blend_method='BLEND'
+
+        bpy.ops.mesh.primitive_cube_add()
+        obj = bpy.context.selected_objects[0]
+        obj.name = "trunk"
+        obj.data.materials.append(mat_tru)
+
+        obj.location=(-0.020345, 2.64449, 1.14081)
+        bpy.ops.transform.resize(value=(0.777124, 0.365566, 0.5))
+
+        #Adding motor box object
+        mat_mot = bpy.data.materials.new(name="collision")
+        mat_mot.use_nodes = True
+        mat_mot.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.744, 0.707, 0.906, 1)
+        mat_mot.node_tree.nodes["Principled BSDF"].inputs[18].default_value = 0.0666667
+        mat_mot.blend_method='BLEND'
+
+        bpy.ops.mesh.primitive_cube_add()
+        obj = bpy.context.selected_objects[0]
+        obj.name = "motor"
+        obj.data.materials.append(mat_mot)
+
+        obj.location=(0.005389, -1.33169, 1.14081)
+        bpy.ops.transform.resize(value=(0.777124, 0.706801, 0.223486))
+
         #Increasing vehicle index
         next_model.model_index += 1
         
