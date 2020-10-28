@@ -253,7 +253,7 @@ DefaultSounds: """ + paths.pack_name + """.sounds_""" + vehicle_name + """
 
 SteeringWheel{
     PartName: SteeringWheel
-    BaseRotation: 1 """ + str(next_model.vehicle_steering[3]) + """ """ + str(next_model.vehicle_steering[4]) + """ """ + str(next_model.vehicle_steering[5]) + """
+    BaseRotation: 31.7 1 0 0
     Position: """ + str(next_model.vehicle_steering[0]) + """ """ + str(next_model.vehicle_steering[1]) + """ """ + str(next_model.vehicle_steering[2]) + """
 }
 
