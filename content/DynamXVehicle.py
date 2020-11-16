@@ -258,10 +258,16 @@ DrawLifeAddon{
     Trunk: 20
     FuelInTank: 50
     Strength: 100
-    Trunk_Position: """ + str(next_model.vehicle_trunk[0]) + """ """ + str(next_model.vehicle_trunk[1]) + """ """ + str(next_model.vehicle_trunk[2]) + """ 
-    Trunk_Scale: """ + str(next_model.vehicle_trunk[3]) + """ """ + str(next_model.vehicle_trunk[4]) + """ """ + str(next_model.vehicle_trunk[5]) + """ 
-    Motor_Position: """ + str(next_model.vehicle_motor[0]) + """ """ + str(next_model.vehicle_motor[1]) + """ """ + str(next_model.vehicle_motor[2]) + """ 
-    Motor_Scale: """ + str(next_model.vehicle_motor[3]) + """ """ + str(next_model.vehicle_motor[4]) + """ """ + str(next_model.vehicle_motor[5]) + """ 
+}
+
+Trunk{
+    Position: """ + str(next_model.vehicle_trunk[0]) + """ """ + str(next_model.vehicle_trunk[1]) + """ """ + str(next_model.vehicle_trunk[2]) + """ 
+    Scale: """ + str(next_model.vehicle_trunk[3]) + """ """ + str(next_model.vehicle_trunk[4]) + """ """ + str(next_model.vehicle_trunk[5]) + """ 
+}
+
+Motor{
+    Position: """ + str(next_model.vehicle_motor[0]) + """ """ + str(next_model.vehicle_motor[1]) + """ """ + str(next_model.vehicle_motor[2]) + """ 
+    Scale: """ + str(next_model.vehicle_motor[3]) + """ """ + str(next_model.vehicle_motor[4]) + """ """ + str(next_model.vehicle_motor[5]) + """ 
 }
 
 DefaultEngine: """ + paths.pack_name + """.engine_""" + vehicle_name + """
@@ -284,7 +290,7 @@ Shape_Top{
 
 WheelFrontLeft{
     AttachedWheel: """ + paths.pack_name + """.wheel_""" + vehicle_name + """
-    isRight: false
+    IsRight: false
     Position: """ + str(next_model.vehicle_flwheel[0]) + """ """ + str(next_model.vehicle_flwheel[1]) + """ """ + str(next_model.vehicle_flwheel[2]) + """
     IsSteerable: True
     MaxTurn: 0.7
@@ -292,7 +298,7 @@ WheelFrontLeft{
 }
 WheelFrontRight{
     AttachedWheel: """ + paths.pack_name + """.wheel_""" + vehicle_name + """
-    isRight: true
+    IsRight: true
     Position: """ + str(next_model.vehicle_frwheel[0]) + """ """ + str(next_model.vehicle_frwheel[1]) + """ """ + str(next_model.vehicle_frwheel[2]) + """
     IsSteerable: True
     MaxTurn: 0.7
@@ -301,7 +307,7 @@ WheelFrontRight{
 
 WheelBackLeft{
     AttachedWheel: """ + paths.pack_name + """.wheel_""" + vehicle_name + """
-    isRight: false
+    IsRight: false
     Position: """ + str(next_model.vehicle_blwheel[0]) + """ """ + str(next_model.vehicle_blwheel[1]) + """ """ + str(next_model.vehicle_blwheel[2]) + """
     IsSteerable: False
     MaxTurn: 0
@@ -310,7 +316,7 @@ WheelBackLeft{
 
 WheelBackRight{
     AttachedWheel: """ + paths.pack_name + """.wheel_""" + vehicle_name + """
-    isRight: true
+    IsRight: true
     Position: """ + str(next_model.vehicle_brwheel[0]) + """ """ + str(next_model.vehicle_brwheel[1]) + """ """ + str(next_model.vehicle_brwheel[2]) + """
     IsSteerable: False
     MaxTurn: 0
